@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    container_name: reakuto
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - VIMRC_PATH=${VIMRC_PATH:-.vimrc.example}
+    ports:
+      - ${WEB_CONTAINER_FORWARD_PORT:-3000}:3000
+    volumes:
+      - .:/usr/src/reakuto
+      - ~/.gitconfig:/etc/gitconfig
+    working_dir: /usr/src/reakuto/reakuto-app
+    tty: true
