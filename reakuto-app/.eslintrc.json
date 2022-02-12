@@ -19,7 +19,9 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "project": "./tsconfig.eslint.json",
+    "sourceType": "module",
+    "tsconfigRootDir": "."
   },
   "plugins": [
     "@typescript-eslint",
