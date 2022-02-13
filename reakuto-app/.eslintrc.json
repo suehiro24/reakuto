@@ -49,6 +49,65 @@
         "react/prop-types": "off"
       }
     }
-  ]
+  ],
+
+  "rules": {
+    // For Effect Hooks (Allow void as statement only)
+    "no-void": [
+      "error",
+      {
+        "allowAsStatement": true
+      }
+    ],
+    // Allow no blank line only after single line members
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    // Allow no-unused-vars only the variable is named "_"
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "argsIgnorePattern": "_",
+        "ignoreRestSiblings": false,
+        "varsIgnorePattern": "_"
+      }
+    ],
+    // For TS-compiler
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    // Allow JSX in .tsx files
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+    // Allow explicitSpread only
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "html": "enforce",
+        "custom": "enforce",
+        "explicitSpread": "ignore"
+      }
+    ],
+    // With the new jsx transform, there is No need to import the react library in components.
+    // see: https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+    "react/react-in-jsx-scope": "off"
+  }
 
 }
