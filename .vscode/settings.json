@@ -1,5 +1,13 @@
 {
 	"eslint.workingDirectories": [
     "./reakuto-app",
-  ]
+  ],
+
+  /**
+   * CSS
+   */
+   // StyleLint拡張を利用するためにデフォルトの検証を無効化
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
 }
