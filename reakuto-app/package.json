@@ -21,8 +21,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'"
+    "lint": "npm run -s lint:style; npm run -s lint:es",
+    "lint:fix": "npm run -s lint:style:fix && npm run -s lint:es:fix",
+    "lint:es": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:es:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
+    "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'"
   },
   "eslintConfig": {
     "extends": [
