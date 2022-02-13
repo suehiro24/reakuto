@@ -39,5 +39,16 @@
         "paths": ["src"]
       }
     }
-  }
+  },
+
+  "overrides": [
+    {
+      // No need to check the type of props in .tsx files
+      "files": ["*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ]
+
 }
