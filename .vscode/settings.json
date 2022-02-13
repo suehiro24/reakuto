@@ -4,6 +4,14 @@
   ],
 
   /**
+   * JavaScript & TypeScript
+   */
+  // Formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  /**
    * CSS
    */
    // StyleLint拡張を利用するためにデフォルトの検証を無効化
