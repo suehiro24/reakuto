@@ -31,6 +31,13 @@
     "react-hooks"
   ],
   "root": true,
-  "rules": {
+
+  "settings": {
+    // Add baseurl in tsconfig.json to eslint-import-resolver-node
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }
