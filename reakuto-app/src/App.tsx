@@ -1,4 +1,5 @@
 import React from 'react';
+import Calculator from 'LiftingStateUp/containters/Calculator';
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,6 +20,9 @@ const App = () => (
         Learn React
       </a>
     </header>
+
+    {/* see:  https://ja.reactjs.org/docs/hooks-effect.html */}
+    <Calculator />
   </div>
 );
 
